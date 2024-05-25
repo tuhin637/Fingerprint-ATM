@@ -1,13 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
 
-# Simulated user data
 users = {
     'user1': {'pin': '1234', 'balance': 1000},
-    # Add more users as needed
+   
 }
 
-# Simulate fingerprint authentication (always returns True for simplicity)
+
 def authenticate_fingerprint():
     return True
 
@@ -30,7 +29,7 @@ class ATM:
     def scan_fingerprint(self):
         if authenticate_fingerprint():
             messagebox.showinfo("Success", "Fingerprint Authentication Successful")
-            self.current_user = 'user1'  # Assuming the fingerprint belongs to 'user1'
+            self.current_user = 'user1' 
             self.main_screen()
         else:
             messagebox.showerror("Error", "Fingerprint Authentication Failed")
